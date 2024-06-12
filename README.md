@@ -5,7 +5,10 @@ Open this project in your pycharm or any IDE
 ```
 pip3 install -r requirements.txt
 ```
-
+Install Playwright
+```
+playwright install
+```
 Execute the below command in terminal
 
 ```
