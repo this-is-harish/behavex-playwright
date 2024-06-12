@@ -23,3 +23,4 @@ behavex -t "tag_name" --parallel-processes 2
 After executing the tests, a new output folder will be generated. You can see the report in `output/report.html`
 
 **NOTE:** For testing purpose I added facebook.com as URL. So, please change your Test URL 😜
+![img.png](img.png)
