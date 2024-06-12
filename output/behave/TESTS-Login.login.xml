@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="0.24533843994140625" tests='2' skipped='0'
+name="Loginlogin" failures='0' errors='0'><testcase time="0.12138223648071289" name="Test_Login2" status="passed"
+         classname="Test1" >
+            <system-out>
+            <![CDATA[
+            @scenario.begin
+                @Invalid
+                scenario: Test Login2
+e                given User enters login details ... passed in 0.0776s 
+                when User clicks submit button ... passed in 0.03656s 
+                then Following error message is displayed: &#34;The email or mobile number you entered isn’t connected to an account.&#34; ... passed in 0.007219s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0.12395620346069336" name="Test_Login" status="passed"
+         classname="Test1" >
+            <system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Test Login
+e                given User enters login details ... passed in 0.06887s 
+                when User clicks submit button ... passed in 0.04944s 
+                then Following error message is displayed: &#34;The email or mobile number you entered isn’t connected to an account.&#34; ... passed in 0.005654s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>
