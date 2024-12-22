@@ -5,14 +5,14 @@ from playwright.sync_api import expect
 from pages.login.login_page import LoginPage
 
 
-@step('User enters login details')
+@step("User enters login details")
 def do_this(context: Context):
     login_page = LoginPage(context)
     login_page.fill_user_name(user_name=context.user_name)
     login_page.fill_password(password=context.password)
 
 
-@step('User clicks submit button')
+@step("User clicks submit button")
 def click_submit_button(context: Context):
     login_page = LoginPage(context)
     login_page.click_login_button()

@@ -67,3 +67,21 @@ Feature: Manual Feature
     When the DMS performs an operation requiring 15GB of storage
     Then the data should be distributed across the two devices
     And the data should be retrieved accurately and consistently
+
+  @MANUAL
+  Scenario: Verify if the root anchor is able to delegate access to user
+    Given root anchor context is created
+    When user executes command to delegate the access
+    Then command is executed successfully
+
+  @MANUAL
+  Scenario: Verify if a non-root anchor is not able to delegate access to user
+    Given dms is running
+    When non-root user executes command to delegate the access
+    Then user gets an error
+
+  @MANUAL
+  Scenario: Verify granted access is revoked after expiry date
+    Given dms is created
+    When user create a capability anchor for public behaviors
+    Then capability has to be revoked after expiry date
