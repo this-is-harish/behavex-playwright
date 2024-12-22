@@ -1,7 +1,7 @@
 @Anchor
 Feature: Add a root anchor for your DMS context
 
-  @Critical @Anchor
+  @Critical @Anchor @Smoke
   Scenario: Verify if a user can be added to anchor context
     Given user executes command to create new user with "correct" passphrase
     And user executes command to retrieve keys with "correct" passphrase for "valid" user
@@ -15,14 +15,14 @@ Feature: Add a root anchor for your DMS context
     When user adds specific user to root dms context with incorrect key
     Then specified user is not added root anchor
 
-  @Grant @Critical
+  @Grant @Critical @Smoke
   Scenario: Verify if a user can be given grant to context
     Given user executes command to create new user with "correct" passphrase
     And user executes command to retrieve keys with "correct" passphrase for "valid" user
     When user creates grant user context for valid expiry date
     Then user is granted access successfully
 
-  @Grant @test
+  @Grant
   Scenario: Verify if a user can be given grant to context with invalid expiry date (before passphrase)
     Given user executes command to create new user with "correct" passphrase
     And user executes command to retrieve keys with "correct" passphrase for "valid" user

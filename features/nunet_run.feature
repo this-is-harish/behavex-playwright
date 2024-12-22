@@ -1,12 +1,12 @@
 Feature: Nunet Run
 
-  @NunetRun
+  @NunetRun @Critical @Smoke
   Scenario: Verify if  the user is able to run nunet dms
     Given user executes command to create new DMS with "correct" passphrase
     When user enters command to run dms with correct passphrase
     Then dms is running on port 9999
 
-  @MANUAL
+  @MANUAL @Smoke
   Scenario: Verify if the user gets an error message if port 9999 is already in use
     Given port 9999 is already in use
     When user enters command to run dms
@@ -20,7 +20,7 @@ Feature: Nunet Run
     Then the consumer should be notified
     And the operation should pause until the connection is restored
 
-  @MANUAL
+  @MANUAL @Smoke @Critical
   Scenario: Verify if dms run command fails if passphrase is incorrect
     Given users are created
     When user enters command to run dms

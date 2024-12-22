@@ -9,7 +9,7 @@ Feature: Keys retrieval
     When user executes command to retrieve keys with "correct" passphrase for "valid" user
     Then keys for the specific user is retrieved
 
-  @Critical
+  @Critical @Smoke
   Scenario: Verify if the user is not able to retrieve the DID keys if passphrase is incorrect
     When user executes command to retrieve keys with "incorrect" passphrase for "valid" user
     Then keys for the specific user is not retrieved
